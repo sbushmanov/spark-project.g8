@@ -30,6 +30,10 @@ object Main extends SparkSessionBuilder {
 
     // Print result
     println(s"Count of elements: \$count")
+
+    println(spark.catalog.listTables().show)
+
+    spark.stop
   }
 
 }
