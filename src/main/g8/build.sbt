@@ -19,7 +19,7 @@ libraryDependencies ++= Seq(
   "com.github.mrpowers" %% "spark-fast-tests"   % "1.3.0"  % Test
 )
 
-assembly /assemblyJarName := "$name;format="lower"$-fatjar-$version$.jar"
+assembly /assemblyJarName := s"\${name.value}-fatjar-\${version.value}.jar"
 
 assembly / assemblyMergeStrategy := {
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard
